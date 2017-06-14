@@ -1,0 +1,248 @@
+@import url(https://fonts.googleapis.com/css?family=Nixie+One);
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: rgba( 255, 255, 255, 0.9 );
+}
+
+h1 {
+  position: absolute;
+  width: 300px;
+  margin: 90px 30px;
+  padding: 4px;
+  font-size: 2em;
+  font-weight: bold;
+  transform: rotate(-10deg);
+}
+h1 span {
+  text-transform: uppercase;
+  display: block;
+  text-align: justify;
+}
+
+.url-share {
+  position: relative;
+  top: 15px;
+  padding: 10px;
+  background: rgb( 255, 255, 255 );
+  overflow: hidden;
+  border-radius: 1px;
+  color: rgb( 0, 0, 20 );
+  display: none;
+  cursor: pointer;
+}
+
+.url-share, .vote {
+  margin: auto;
+  width: 50%;
+  min-width: 450px;
+  max-width: 550px;
+}
+
+.window {
+  margin: auto;
+  display: block;
+  width: 300px;
+  height: auto;
+}
+
+.penguin path {
+  fill: rgb( 255, 255, 255 );
+}
+
+.daggers {
+  display: none;
+}
+
+.body, .round, .daggers, h1 {
+  animation: flicker 1.5s infinite ease-in-out alternate;
+  animation-delay: 0.5s;
+}
+
+.outer path {
+  fill: rgb( 255, 255, 0); /* Yellow */
+  filter: url( #glow );
+  opacity: 0.4; /* Dial this back to .2 for a really sinister looking penguin.. */
+  transition: fill .7s ease-in-out;
+}
+
+.down, .up {
+  animation: illuminate 1.3s infinite ease-in-out;
+}
+
+.down {
+  animation-direction: reverse;
+}
+
+.up {
+  animation-direction: normal;
+  opacity: 0.1;
+}
+
+.vote {
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  margin: 3px;
+  padding: 0px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 3em;
+  font-weight: bold;
+  transition: all 0.5s;
+  border: none;
+  outline-width: 0;
+}
+
+.button.in {
+  color: rgb( 229,0,125 );
+}
+.button.in:hover {
+  animation: in-text 1.5s ease-in-out infinite alternate;
+}
+
+.button.out {
+  color: rgb( 0,158,227);
+}
+
+.button.out:hover {
+  animation: out-text 1.5s ease-in-out infinite alternate;
+}
+
+.toggle-in {
+  color: rgb( 255, 255, 255 ) !important;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+}
+
+.toggle-out {
+  color: rgb( 255, 255, 255 ) !important;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+}
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  .window {
+    margin: 0;
+    width: 80%;
+  }
+
+  .url-share {
+    width: 95%;
+  }
+
+}
+
+@keyframes illuminate {
+  0% {
+      opacity: 0.12;
+    }
+  45% {
+    opacity: 0.12;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.4;
+  }
+  5% {
+    opacity: 0.9;
+  }
+  10% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.9;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0.85;
+  }
+  40% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0.85;
+  }
+  60% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  95% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes in-text {
+  from {
+    color: rgb( 255, 255, 255 );
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+  to {
+    color: rgb( 255, 255, 255 );
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+}
+
+@keyframes out-text {
+  from {
+    color: rgb( 255, 255, 255 );
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  }
+  to {
+    color: rgb( 255, 255, 255 );
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+  }
+}
