@@ -3,9 +3,9 @@ body {
   font-family: sans-serif;
   font-size: 2em;
   text-align: center;
-  /*backg
-  background: linear-gradient(black, grey, black)*/
-  /*background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;*/
+  background: #112 url('../images/brick-wall.jpg')  center no-repeat;
+  background-size:cover;
+  margin:0
 }
 
 #score {
@@ -55,15 +55,6 @@ i {
   margin: 0 8px;
 }
 
-/*BACKGROUND*/
-html,body{
-  height:100%
-}
-body {
-  background: #112 url('../images/brick-wall.jpg')  center no-repeat;
-  background-size:cover;
-  margin:0
-}
 .logo {
   text-align: center;
   width: 65%;
@@ -78,13 +69,14 @@ body {
 
 .logo b{
   font-family:'Vibur', cursive;
-  /*font: 100 15vh "Vibur";*/
   color: #fee;
   text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
 }
+
 .logo b span{
   animation: blink linear infinite 2s;
 }
+
 @keyframes blink {
   78% {
     color: inherit;
