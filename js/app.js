@@ -1,13 +1,12 @@
 $(document).ready( function () {
   $('.game-screen').hide();
+  ion.sound.play("tetris-soundtrack-original");
 
-  $('.start-button').click( function () {
+  $('.start-button').one( 'click', function () {
     $('.start-screen').fadeOut();
     $('.game-screen').fadeIn();
+    startGame();
   });
 
-  playerReset();
-  updateScore();
-  update();
 
 });

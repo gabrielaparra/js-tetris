@@ -225,6 +225,12 @@ function playerRotate(direction) {
   }
 }
 
+function startGame() {
+  playerReset();
+  updateScore();
+  update();
+}
+
 var dropCounter = 0;
 var dropInterval = 1000;
 
@@ -287,3 +293,15 @@ var player = {
   matrix: null,
   score: 0,
 };
+
+//SOUNDS
+ion.sound({
+    sounds: [
+        {
+            name: "tetris-soundtrack-original"
+        }
+    ],
+    volume: 1.0,
+    path: "ion-sound/sounds/",
+    preload: true
+});
