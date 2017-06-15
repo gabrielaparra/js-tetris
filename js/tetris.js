@@ -19,6 +19,8 @@ function arenaSweep() {
 
     player.score += rowCount * 10;
     rowCount *= 2;
+    ion.sound.play("clear-row");
+    //a row is cleared
   }
 }
 
@@ -197,10 +199,9 @@ function playerReset() {
 
   if (collide(arena, player)) {
     arena.forEach( function (row) {
-      console.log('HELLO');
       return row.fill(0);
       //Resets the arena to be filled with zeroes
-      //because a new piece won't fit in the arena
+      //because a new piece won't fit in
     });
 
     player.score = 0;
@@ -235,6 +236,7 @@ var dropCounter = 0;
 var dropInterval = 1000;
 
 var lastTime = 0;
+
 function update(time = 0) {
   var deltaTime = time - lastTime;
 
@@ -298,14 +300,19 @@ var player = {
 ion.sound({
     sounds: [
         {
-            name: "tetris-soundtrack-original"
+            name: "tetris-soundtrack-original",
+            loop: true
         },
         {
-            name: "tetris-soundtrack-remix"
+            name: "tetris-soundtrack-remix",
+            loop: true,
+            volume: 0.4
+        },
+        {
+            name: "clear-row",
         }
     ],
     volume: 0.8,
     path: "ion-sound/sounds/",
     preload: true,
-    loop: true
 });
