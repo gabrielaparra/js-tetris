@@ -5,7 +5,9 @@ $(document).ready( function () {
   $('.start-button').one( 'click', function () {
     $('.start-screen').fadeOut();
     $('.game-screen').fadeIn();
+    ion.sound.stop("tetris-soundtrack-original");
     startGame();
+    ion.sound.play("tetris-soundtrack-remix");
   });
 
 

@@ -1,3 +1,38 @@
+.start-screen {
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 60px auto;
+}
+
+.start-screen h2 {
+  font-size: 1.5em;
+  font-family:'Vibur', cursive;
+}
+
+.start-screen h3 {
+  font-size: 0.8em;
+  font-weight: normal;
+  margin: 30px 0 10px;
+}
+
+.start-button {
+  color: white;
+  font-size: 20px;
+  background: transparent;
+  border: 2px solid white;
+  padding: 5px 100px;
+  border-radius: 10px;
+}
+
+.start-button:hover {
+  box-shadow:0 0 20px white;
+}
+
+/*PENGUIN*/
 .window {
   margin: auto;
   display: block;

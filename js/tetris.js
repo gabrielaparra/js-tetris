@@ -299,9 +299,13 @@ ion.sound({
     sounds: [
         {
             name: "tetris-soundtrack-original"
+        },
+        {
+            name: "tetris-soundtrack-remix"
         }
     ],
-    volume: 1.0,
+    volume: 0.8,
     path: "ion-sound/sounds/",
-    preload: true
+    preload: true,
+    loop: true
 });
